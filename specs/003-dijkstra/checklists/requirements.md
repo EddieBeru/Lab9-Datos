@@ -2,4 +2,4 @@
 
 - [x] Alcance e historias identificados sin diseño interno.
 - [x] Escenarios y criterios medibles.
-- [ ] Formato y contrato completamente definidos.
+- [x] Formato y contrato completamente definidos.

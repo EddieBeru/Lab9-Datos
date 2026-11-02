@@ -6,3 +6,6 @@ Usuario eligió Dijkstra; constitución ampliada a 1.1.0 mediante skill instalad
 resolvedor real y commit separado. Resto de fases inicialmente pendientes.
 Specify: habilidad instalada, prompt completo de guía, resolve_template.py ejecutado;
 borrador y checklist creados. Sin hooks. No se implementó aplicación en esta fase.
+
+Clarify: se aplicó skill y prompt íntegro sección 4; prerrequisitos paths-only
+ejecutados. Recomendaciones delegadas registradas, checklist 3/3; sin pendientes.
