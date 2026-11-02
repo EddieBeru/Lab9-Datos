@@ -1,7 +1,14 @@
 # Reflexión del laboratorio — borrador factual
 
-Este borrador no cuenta como reflexión final: faltan las valoraciones personales
-solicitadas al estudiante para cerrar la reflexión.
+Este borrador incorpora la experiencia aportada por el estudiante. Solo faltan
+su valoración sobre la decisión más difícil y un incidente concreto, si lo hubo.
+
+Nuestra experiencia fue que agy nos falló, así que nos fuimos a Codex y funcionó
+«de 10». Esa fue la valoración del grupo sobre el cambio de agente; no quedó
+registrado qué fallo concreto tuvo agy. Como comentario humorístico sobre el uso
+de recursos, lo resumimos así: «Felicidades a OpenAI por drenar la represa de
+Cartago para ayudar con este lab». La frase es una broma del grupo, no un hecho
+comprobado sobre consumo de agua.
 
 Se utilizó Codex con la integración de Spec Kit 1.2.3 y habilidades locales. El
 laboratorio comenzó dentro de un repositorio que también contenía otros trabajos.
@@ -51,12 +58,12 @@ inicial. En Feature 1 se observaron 24 pruebas fallidas antes de la lógica y lu
 tras implementar el ordenamiento, las 38 pruebas aprobaron también sobre main.
 Los dos DAG producen orden válido y el archivo con ciclo produce el error esperado.
 
-Pendiente de respuesta personal del estudiante:
+Pendientes personales que el estudiante aún no ha detallado:
 
-- Qué ayudó y qué dificultó Codex durante este trabajo.
 - Qué decisión fue la más difícil y por qué, o si ninguna resultó difícil.
-- Un momento en que el agente hizo algo distinto de lo esperado y si se debió a
-  ambigüedad o a incumplimiento; si no recuerda ninguno, registrarlo honestamente.
+- Si hubo un momento concreto en que el agente hizo algo distinto de lo esperado.
+  El fallo de agy fue mencionado, pero no se conoce su causa: no se puede atribuir
+  a ambigüedad de la especificación ni a incumplimiento sin más información.
 
 La publicación y el enlace de entrega siguen pendientes de definir el remoto del
 repositorio independiente. El extra elegido fue Dijkstra y está implementado y fusionado.

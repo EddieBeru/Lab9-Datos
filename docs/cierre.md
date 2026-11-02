@@ -13,7 +13,7 @@ de docs/prompts/cierre-proyecto.md sobre evidencia real; el extra Dijkstra está
 | Pruebas | Pasan | pytest 58 passed después del merge en main |
 | CLI manual | Conforme | show/sort de tres CSV en validaciones y repetidos en main |
 | Extra Dijkstra | Completo localmente | specs/003-dijkstra, merge 624718e |
-| Reflexión | Borrador factual | REFLECTION.md; faltan respuestas personales |
+| Reflexión | Borrador factual | REFLECTION.md; experiencia agy/Codex incorporada, faltan dos detalles personales |
 | Publicación | Pendiente | Sin remoto; URL o nombre/visibilidad solicitados |
 | Entrega | Pendiente | No existe enlace de entrega confirmado |
 
@@ -69,3 +69,13 @@ Se ejecutaron regresiones show/sort con los tres CSV; los mismos estados esperad
 Suite tras fusión en main: 58 passed. Ocho grafos ponderados generados contrastados
 con NetworkX, solo en pruebas. Originales íntegros contra commit inicial.
 Pendientes reales: respuestas personales de reflexión y remoto para publicar las cuatro ramas.
+
+## Comprobación de .gitignore y aporte personal
+
+.gitignore existe y está versionado. git check-ignore confirmó exclusión de .venv,
+__pycache__, .pytest_cache, .env/.env.local, egg-info y dist. git ls-files confirmó
+que los entornos, cachés y .env no están versionados. No fue necesario modificarlo.
+La experiencia real aportada por el estudiante (fallo de agy y valoración «de 10»
+de Codex) se incorporó a REFLECTION.md. La frase sobre la represa se conserva como
+humor atribuido al grupo. No se inventa causa del fallo ni decisión más difícil.
+Solo documentación cambió: no se repitió la suite ya aprobada de 58 pruebas.
