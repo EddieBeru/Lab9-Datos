@@ -44,3 +44,9 @@ y se leyó el prompt completo de la sección 4. La respuesta real del usuario
 fue «todo eso recomendado»; se registró la decisión y se distinguieron las
 recomendaciones delegadas de las preguntas históricas. Requisitos y escenarios
 actualizados; revisión de checklist: 11/16 → 16/16. Sin hooks registrados.
+
+## Plan
+
+Se aplicó speckit-plan con el prompt íntegro de sección 5; setup_plan.py --json
+resolvió y copió la plantilla. Investigación local delegada, diseño registrado
+y revisión constitucional antes/después PASS. Sin hooks. No se creó aplicación.
