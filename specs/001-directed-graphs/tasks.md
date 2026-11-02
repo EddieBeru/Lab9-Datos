@@ -28,7 +28,7 @@ Objetivo: errores comprensibles sin salida parcial; prueba independiente con ent
 
 ## Phase 5: Polish
 
-- [ ] T008 Ejecutar suite y revisar manualmente CLI con tres CSV originales; guardar comandos y resultados en specs/001-directed-graphs/validacion.md (FR-006, SC-001–003).
+- [x] T008 Ejecutar suite y revisar manualmente CLI con tres CSV originales; guardar comandos y resultados en specs/001-directed-graphs/validacion.md (FR-006, SC-001–003).
 - [x] T009 Documentar instalación y uso en docs/USAGE.md y decisiones/evidencia en specs/001-directed-graphs/seguimiento.md para REFLECTION.md.
 
 ## Dependencies & Execution Order
