@@ -25,3 +25,11 @@ prevista 100 %, ambigüedades 0, duplicaciones 0, CRITICAL 0, HIGH 0.
 Sin tareas huérfanas ni conflictos constitucionales. T009 conserva evidencia exigida.
 No prueba cobertura ejecutada: las pruebas todavía deben escribirse y ejecutarse.
 Sin hooks. Siguiente acción: speckit-implement, después validación y merge.
+
+## Reanálisis de 0dcc795
+
+Se repitió speckit-analyze con el mismo prompt íntegro y comprobación de
+prerrequisitos tras corregir AS-003 y research. Conteo de 9 vértices confirmado
+por inspección del CSV. Mismos 6 FR, 9 tareas y 9 escenarios, cobertura 100 %.
+Sin hallazgos CRITICAL/HIGH ni ambigüedades. T002 exige pruebas derivadas de los
+escenarios corregidos; no requiere cambiar tasks. Este análisis fue de solo lectura.
