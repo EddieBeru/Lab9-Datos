@@ -36,3 +36,11 @@ Siguiente paso: commit de specify y aclaraciones de comportamiento.
 | Commits | Parcial | Inicial y constitución guardados |
 | Merge | Pendiente | Feature sin terminar |
 | Push | Pendiente | Falta remoto |
+
+## Clarify
+
+Specify guardado en 977de19. Se ejecutó check_prerequisites.py --json --paths-only
+y se leyó el prompt completo de la sección 4. La respuesta real del usuario
+fue «todo eso recomendado»; se registró la decisión y se distinguieron las
+recomendaciones delegadas de las preguntas históricas. Requisitos y escenarios
+actualizados; revisión de checklist: 11/16 → 16/16. Sin hooks registrados.

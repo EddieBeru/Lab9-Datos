@@ -2,8 +2,28 @@
 
 **Feature Branch**: `001-directed-graphs`
 **Created**: 2026-11-01
-**Status**: Draft — pendiente de aclaraciones de comportamiento
-**Input**: Prompt completo de Specify, sección 2 de docs/prompts/feature-1.md.
+**Status**: Aclarada
+**Input**: Prompt completo de Specify en prompt-specify.txt; guía Feature 1.
+
+## Clarifications
+
+### Session 2026-11-01
+
+- Pregunta efectivamente formulada: ¿cómo tratar watch,? → El usuario respondió
+  «todo eso recomendado»; se aplica A: vértice aislado.
+- El usuario autorizó resolver el resto mediante recomendaciones razonadas.
+  Las siguientes son decisiones delegadas, no preguntas ni respuestas históricas:
+  duplicados se unifican, ciclos y autoaristas se conservan (cargar no es ordenar);
+  esto permite representar los archivos originales sin ocultar información.
+- Recomendación aplicada: CSV UTF-8 (BOM permitido), encabezado exacto source,target,
+  dos columnas; recortar espacios exteriores y conservar mayúsculas. Se descartan
+  líneas físicamente vacías; un origen vacío o una fila incompleta se rechaza.
+  Destino vacío significa vértice aislado. Archivo sin encabezado se rechaza;
+  solo encabezado representa el grafo vacío.
+- Recomendación aplicada: show ARCHIVO, salida JSON con vertices y edges ordenados
+  lexicográficamente, sin datos parciales en errores; mensajes en español,
+  éxito 0, errores de lectura/formato 1, argumentos inválidos 2.
+  Un formato estructurado conserva nombres con comas y facilita validar resultados.
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -11,86 +31,91 @@
 
 Como usuario quiero cargar un archivo y ver sus vértices y aristas dirigidas.
 
-**Why this priority**: Es la funcionalidad central del laboratorio.
-**Independent Test**: Ejecutar la consulta de un archivo y contrastar vértices y aristas.
+**Why this priority**: Es la funcionalidad central.
+**Independent Test**: Consultar un archivo y contrastar el resultado completo.
 
 **Acceptance Scenarios**:
 
-1. **AS-001 Given** un archivo con encabezado source,target y aristas válidas,
-   **When** se carga y muestra, **Then** aparecen todos sus vértices y aristas,
-   conservando la dirección de origen a destino.
-2. **AS-002 Given** cs-curriculum.csv, **When** se consulta,
-   **Then** se aplica a Data Structures,Algorithms la política de duplicados
-   pendiente de aclarar en FR-002 y se muestra el resultado definido por ella.
-3. **AS-003 Given** small-dag.csv, **When** se consulta,
-   **Then** se aplica a watch, la política de extremos vacíos de FR-002.
-4. **AS-004 Given** build-with-cycle.csv, **When** se consulta,
-   **Then** se aplica al ciclo auth → session → user-profile → auth y al bucle
-   metrics → metrics la política de FR-002, sin calcular un orden topológico.
+- **AS-001**: Dado CSV válido con a,b y b,c, al mostrarlo aparecen vertices
+  [a,b,c] y edges [[a,b],[b,c]], con estado 0 y stderr vacío.
+- **AS-002**: Dado cs-curriculum.csv, al mostrarlo aparecen 23 aristas distintas;
+  Data Structures → Algorithms aparece una vez, con todos sus extremos presentes.
+- **AS-003**: Dado small-dag.csv, al mostrarlo aparecen 10 vértices y 9 aristas;
+  watch está presente sin aristas incidentes.
+- **AS-004**: Dado build-with-cycle.csv, al mostrarlo aparecen sus 13 aristas,
+  conservando el ciclo auth → session → user-profile → auth y metrics → metrics.
+- **AS-008**: Dado encabezado sin filas, al mostrarlo aparecen vertices y edges
+  vacíos con estado 0. Líneas vacías posteriores no cambian el resultado.
+- **AS-009**: Dadas filas con espacios exteriores, etiquetas A y a, nombres con
+  espacios internos o nombres entrecomillados con comas, al mostrar se recortan solo
+  espacios exteriores; A y a siguen siendo distintos y las comas se conservan.
 
 ### User Story 2 - Entender errores de entrada (Priority: P2)
 
-Como usuario quiero conocer por qué mi archivo no puede procesarse.
+Como usuario quiero saber por qué una entrada no puede procesarse.
 
-**Why this priority**: Permite corregir entradas sin interpretar errores internos.
-**Independent Test**: Consultar una ruta inexistente y comprobar el error observable.
+**Why this priority**: Permite corregir errores sin interpretar fallos internos.
+**Independent Test**: Consultar entradas inválidas y revisar canales y estados.
 
 **Acceptance Scenarios**:
 
-1. **AS-005 Given** una ruta inexistente o sin permiso de lectura,
-   **When** se intenta consultar, **Then** se informa el error por stderr,
-   se termina con estado distinto de cero y no se muestra traceback.
-2. **AS-006 Given** un archivo vacío, de solo encabezado o con filas malformadas,
-   **When** se consulta, **Then** se aplica la política pendiente de FR-003.
-3. **AS-007 Given** una invocación incorrecta,
-   **When** se ejecuta, **Then** se informa por stderr y se termina con estado
-   distinto de cero sin traceback, según el contrato pendiente de FR-004.
+- **AS-005**: Dada ruta inexistente, directorio o archivo ilegible, al mostrarlo
+  stdout está vacío, stderr comienza por Error:, estado 1 y no hay traceback.
+- **AS-006**: Dado archivo sin encabezado, encabezado distinto, número de columnas
+  distinto de dos, origen vacío, comillas mal cerradas o bytes no UTF-8, al mostrar
+  no hay resultado parcial; stderr comienza por Error:, estado 1 sin traceback.
+  Los errores estructurales indican la línea; lectura/codificación identifica archivo.
+- **AS-007**: Dada invocación sin comando, sin archivo o con argumentos desconocidos,
+  se termina con estado 2, stdout vacío y ayuda de uso en stderr sin traceback.
+  --help termina con estado 0 y ayuda en stdout.
 
 ### Edge Cases
 
-La revisión previa a clarify debe resolver: duplicados, destino u origen vacío,
-ciclos, autoaristas, vértices aislados, archivo vacío, encabezado incorrecto,
-columnas faltantes o adicionales, comillas, líneas vacías, codificación,
-espacios y mayúsculas, orden de salida y rutas inexistentes o ilegibles.
-Los escenarios anteriores son borradores hasta convertir estas políticas en
-resultados concretos; no están listos para implementar.
+Duplicados se unifican sin advertencia; ciclos y bucles se conservan.
+Un origen vacío siempre es inválido, incluso si ambos extremos están vacíos.
+Una línea sin campos se ignora; una fila con espacios o delimitadores se valida.
+Los nombres quedan vacíos si solo contienen espacios exteriores.
+Las filas válidas anteriores a un error nunca se imprimen parcialmente.
+Se admiten saltos LF y CRLF y campos CSV entrecomillados; no se admiten comillas
+mal cerradas. Los archivos se leen completos antes de producir resultados.
 
 ## Requirements *(mandatory)*
 
 ### Functional Requirements
 
-- **FR-001**: El usuario DEBE poder cargar desde archivo un grafo dirigido sin pesos
-  y consultar todos sus vértices y aristas, respetando la dirección source → target.
-- **FR-002**: [NEEDS CLARIFICATION: definir tratamiento de aristas duplicadas,
-  extremos vacíos, vértices aislados, ciclos y autoaristas en los tres CSV.]
-- **FR-003**: [NEEDS CLARIFICATION: definir formato admitido, encabezado, identidad
-  de nombres, espacios, mayúsculas, filas inválidas y archivos vacíos.]
-- **FR-004**: [NEEDS CLARIFICATION: definir invocación, formato y orden de salida,
-  mensajes y códigos concretos de terminación.]
-- **FR-005**: Los resultados DEBEN ir a stdout; los errores a stderr con estado
-  distinto de cero, sin traceback para errores esperados del usuario.
-- **FR-006**: Cada escenario de aceptación DEBE validarse automáticamente;
-  la validación DEBE incluir los tres archivos originales sin modificarlos.
+- **FR-001**: Cargar y mostrar todos los vértices y aristas source → target sin pesos.
+- **FR-002**: Unificar aristas repetidas; aceptar ciclos y autoaristas; destino vacío
+  declara únicamente el vértice origen, sin crear un vértice de nombre vacío.
+- **FR-003**: Leer CSV UTF-8 con BOM opcional, encabezado exacto source,target,
+  dos columnas, nombres recortados y sensibles a mayúsculas; ignorar líneas vacías,
+  aceptar solo encabezado como grafo vacío y rechazar los errores de AS-006.
+- **FR-004**: Ofrecer show ARCHIVO; resultado JSON con claves vertices y edges,
+  vértices únicos y pares de aristas únicos ordenados lexicográficamente por nombre
+  Unicode (aristas por origen y luego destino). --help explica el uso.
+- **FR-005**: Resultados por stdout, errores por stderr sin traceback ni resultado
+  parcial; éxito 0, lectura/formato 1, argumentos 2. Lectura/codificación usa
+  Error: no se pudo leer ARCHIVO; estructura usa Error: línea N: DESCRIPCIÓN.
+  La descripción explica encabezado, columnas, origen vacío o CSV inválido.
+- **FR-006**: Cada escenario DEBE tener prueba automatizada trazable; validar los
+  tres archivos originales sin modificarlos y comprobar canales y estados.
 
 ### Key Entities
 
-- **Vértice**: elemento identificado por un nombre, con identidad pendiente de aclarar.
-- **Arista dirigida**: relación desde un vértice origen hasta un vértice destino.
-- **Grafo**: conjunto de vértices y relaciones dirigidas sin pesos.
+- **Vértice**: nombre no vacío, recortado, sensible a mayúsculas.
+- **Arista dirigida**: par origen-destino, único dentro del grafo.
+- **Grafo**: vértices únicos y relaciones dirigidas, incluidos aislados y bucles.
 
 ## Success Criteria *(mandatory)*
 
 ### Measurable Outcomes
 
-- **SC-001**: Para cada entrada aceptada, el usuario puede consultar el 100 % de los
-  vértices y relaciones definidos por las reglas aclaradas.
-- **SC-002**: Los tres archivos originales tienen resultados observables explícitos
-  y comprobados conforme a sus escenarios de aceptación.
-- **SC-003**: El 100 % de los errores especificados respeta los canales y estados
-  acordados y no expone un traceback.
+- **SC-001**: Cada resultado incluye el 100 % de vértices y relaciones definidos.
+- **SC-002**: Los tres archivos originales producen los resultados de AS-002 a AS-004.
+- **SC-003**: El 100 % de los errores especificados respeta canales y estados,
+  sin traceback ni salida parcial.
 
 ## Assumptions
 
-- Se consulta un archivo local; no se requiere servicio externo ni persistencia.
-- Orden topológico y pesos quedan fuera de Feature 1.
-- Las políticas marcadas son decisiones pendientes, no respuestas atribuidas al usuario.
+Una invocación consulta un archivo local sin persistencia. Orden topológico y pesos
+quedan fuera de esta feature. JSON es un contrato observable, no una representación
+interna. Los nombres listados en escenarios denotan cadenas, no identificadores.
