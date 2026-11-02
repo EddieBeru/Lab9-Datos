@@ -40,3 +40,8 @@ en research.md. NetworkX solo pruebas. Revisión constitucional PASS antes/despu
 Se aplicó speckit-tasks, prompt íntegro sección 6, setup_tasks.py --json
 resolvió plantilla. Seis tareas con rutas, dependencias y pruebas antes de lógica.
 Sin hooks. Las pruebas de Feature 1 son regresión obligatoria.
+
+## Analyze
+
+Revisión dfe6d44; informe emitido y guardado fuera del comando en analisis.md.
+CRITICAL/HIGH 0. Sin modificación de artefactos durante el análisis.
