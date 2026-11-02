@@ -18,5 +18,5 @@ Alternativa: split por comas rompe nombres entrecomillados. No se necesita panda
 Decisión: argparse y json para contrato CLI; pytest para escenarios y subprocess
 para canales/estados reales. Setuptools empaqueta src; ninguna dependencia runtime.
 
-Resultados derivados por inspección: small-dag 10 vértices/9 aristas y watch aislado;
+Resultados derivados por inspección: small-dag 9 vértices/9 aristas y watch aislado;
 curriculum 23 aristas únicas; build 13 aristas con ciclo y bucle conservados.
