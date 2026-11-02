@@ -34,3 +34,9 @@ Requisitos y escenarios propagados. Checklist 4/7 → 7/7. Sin hooks.
 Se aplicó speckit-plan con prompt completo de sección 5; setup_plan.py --json
 copió plantilla. Reutiliza Graph y reader reales; comparación de Kahn/DFS y cola
 en research.md. NetworkX solo pruebas. Revisión constitucional PASS antes/después.
+
+## Tasks
+
+Se aplicó speckit-tasks, prompt íntegro sección 6, setup_tasks.py --json
+resolvió plantilla. Seis tareas con rutas, dependencias y pruebas antes de lógica.
+Sin hooks. Las pruebas de Feature 1 son regresión obligatoria.
