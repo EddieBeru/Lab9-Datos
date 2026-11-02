@@ -1,11 +1,13 @@
-# Reflexión del laboratorio — borrador factual
+# Reflexión del laboratorio
 
-Este borrador incorpora la experiencia aportada por el estudiante. Solo faltan
-su valoración sobre la decisión más difícil y un incidente concreto, si lo hubo.
+Esta reflexión combina la experiencia aportada por el grupo con los resultados
+verificables del laboratorio.
 
 Nuestra experiencia fue que agy nos falló, así que nos fuimos a Codex y funcionó
-«de 10». Esa fue la valoración del grupo sobre el cambio de agente; no quedó
-registrado qué fallo concreto tuvo agy. Como comentario humorístico sobre el uso
+«de 10». Agy duró demasiado y, según nuestra experiencia, se quedó sin tokens
+con una espera de 120 horas. El inconveniente fue el tiempo y el límite de uso,
+no un comportamiento que podamos atribuir a una especificación ambigua o a que
+el agente ignorara instrucciones. Como comentario humorístico sobre el uso
 de recursos, lo resumimos así: «Felicidades a OpenAI por drenar la represa de
 Cartago para ayudar con este lab». La frase es una broma del grupo, no un hecho
 comprobado sobre consumo de agua.
@@ -58,15 +60,13 @@ inicial. En Feature 1 se observaron 24 pruebas fallidas antes de la lógica y lu
 tras implementar el ordenamiento, las 38 pruebas aprobaron también sobre main.
 Los dos DAG producen orden válido y el archivo con ciclo produce el error esperado.
 
-Pendientes personales que el estudiante aún no ha detallado:
-
-- Qué decisión fue la más difícil y por qué, o si ninguna resultó difícil.
-- Si hubo un momento concreto en que el agente hizo algo distinto de lo esperado.
-  El fallo de agy fue mencionado, pero no se conoce su causa: no se puede atribuir
-  a ambigüedad de la especificación ni a incumplimiento sin más información.
-
-La publicación y el enlace de entrega siguen pendientes de definir el remoto del
-repositorio independiente. El extra elegido fue Dijkstra y está implementado y fusionado.
+No recordamos una decisión especialmente complicada. Delegamos las recomendaciones
+al agente y revisamos el resultado mediante requisitos, pruebas y ejecución de la
+CLI. El incidente que señalamos fue la demora y el agotamiento de tokens de agy;
+no recordamos otro caso concreto de comportamiento inesperado atribuible a una
+ambigüedad de la especificación. No inventamos un incidente adicional para cubrir
+esa pregunta: el límite de esta respuesta es que el problema recordado fue de
+recursos y tiempo, no de interpretación de un requisito.
 
 
 En el extra se mantuvo la representación original de las primeras features y se añadió

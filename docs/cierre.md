@@ -1,7 +1,7 @@
-# Auditoría de cierre — parcial
+# Auditoría de cierre
 
 Fecha: 2026-11-01. Revisión de aplicación: main 624718e.
-Este documento no declara el proyecto terminado. Se aplican los prompts auxiliares
+Trabajo local completo; la publicación se verifica en el registro final. Se aplican los prompts auxiliares
 de docs/prompts/cierre-proyecto.md sobre evidencia real; el extra Dijkstra está realizado.
 
 | Entregable | Estado | Evidencia y siguiente acción |
@@ -13,9 +13,9 @@ de docs/prompts/cierre-proyecto.md sobre evidencia real; el extra Dijkstra está
 | Pruebas | Pasan | pytest 58 passed después del merge en main |
 | CLI manual | Conforme | show/sort de tres CSV en validaciones y repetidos en main |
 | Extra Dijkstra | Completo localmente | specs/003-dijkstra, merge 624718e |
-| Reflexión | Borrador factual | REFLECTION.md; experiencia agy/Codex incorporada, faltan dos detalles personales |
-| Publicación | Pendiente | Sin remoto; URL o nombre/visibilidad solicitados |
-| Entrega | Pendiente | No existe enlace de entrega confirmado |
+| Reflexión | Completa | REFLECTION.md; experiencias y respuestas personales aportadas por el usuario |
+| Publicación | Preparada | Remoto aportado: EddieBeru/Lab9-Datos; confirmar push en registro final |
+| Entrega | Repositorio identificado | https://github.com/EddieBeru/Lab9-Datos |
 
 ## Verificaciones ejecutadas
 
@@ -51,10 +51,9 @@ El conteo inicial incorrecto de 10 vértices en small-dag se detectó durante pr
 se corrigió primero en spec y plan y se repitió analyze antes de continuar. Los
 análisis no reportaron ese error inicialmente; no se les atribuye su descubrimiento.
 
-Sin CRITICAL o HIGH pendientes. No se ha realizado push ni creado remoto. No se
-ha inventado experiencia personal. Solo se conservan resultados realmente ejecutados.
-Siguiente acción: recibir datos de publicación/reflexión;
-completar guía aplicable, reflexión y auditoría, commit final y push de ramas explícitas.
+Sin CRITICAL o HIGH pendientes. Las verificaciones anteriores preceden a la
+publicación; véase el registro final. No se ha inventado experiencia personal.
+Solo se conservan resultados realmente ejecutados.
 
 ## Extra Dijkstra — revisión posterior a fusión
 
@@ -68,7 +67,7 @@ distancias a=0, b=3, c=1, z=null y camino de b [a,c,b]; stderr vacío.
 Se ejecutaron regresiones show/sort con los tres CSV; los mismos estados esperados.
 Suite tras fusión en main: 58 passed. Ocho grafos ponderados generados contrastados
 con NetworkX, solo en pruebas. Originales íntegros contra commit inicial.
-Pendientes reales: respuestas personales de reflexión y remoto para publicar las cuatro ramas.
+En esa revisión faltaban respuestas personales y remoto; ambos fueron aportados después.
 
 ## Comprobación de .gitignore y aporte personal
 
@@ -79,3 +78,16 @@ La experiencia real aportada por el estudiante (fallo de agy y valoración «de 
 de Codex) se incorporó a REFLECTION.md. La frase sobre la represa se conserva como
 humor atribuido al grupo. No se inventa causa del fallo ni decisión más difícil.
 Solo documentación cambió: no se repitió la suite ya aprobada de 58 pruebas.
+
+## Cierre local y preparación de publicación
+
+Usuario aportó https://github.com/EddieBeru/Lab9-Datos.git. git ls-remote respondió
+correctamente sin referencias: remoto vacío al inspeccionarlo. Árbol local limpio.
+Se completó REFLECTION.md con la experiencia real: agy tardó demasiado y agotó tokens
+con espera de 120 horas; Codex funcionó «de 10»; ninguna decisión especialmente difícil
+recordada. No se atribuye el incidente a una spec ambigua sin evidencia.
+
+Solo cambió documentación desde las 58 pruebas aprobadas en main: no se repite la suite.
+Se revisó el diff de cierre y .gitignore; no se incorporan entornos ni secretos.
+Se publicarán explícitamente main, 001-directed-graphs, 002-topological-sort y
+003-dijkstra, conservando commits y ramas, sin force push ni squash.
