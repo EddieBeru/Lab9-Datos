@@ -15,3 +15,6 @@ plantilla. Investigación delegada, representación separada justificada; gates 
 
 Tasks: habilidad y prompt completo sección 6, setup_tasks.py ejecutado; seis
 tareas secuenciales, todas trazables y pruebas antes de código. Sin hooks.
+
+Analyze: revisión d211e9c, informe de solo lectura emitido en conversación y
+conservado después; CRITICAL/HIGH 0. Errata previa de notación corregida en spec.
