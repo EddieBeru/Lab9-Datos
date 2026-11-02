@@ -69,3 +69,12 @@ Rojo: 24 fallos sobre paquete instalado. Primera implementación: 23 pasan,
 shirt, shoes, socks, tie, undershorts, watch = 9 vértices. Se corrige primero spec;
 la aplicación ya produce el resultado correcto. No se inventa un hallazgo de analyze:
 este error fue descubierto por pruebas durante implement.
+
+## Implement
+
+Se aplicó speckit-implement con prompt íntegro de sección 8. Prerrequisitos
+ejecutados, checklist 16/16 leído sin cambiarlo. Instalación editable en venv
+Python 3.12.3, pytest 9.1.1. Rojo confirmado: 24 fallos por comportamientos
+ausentes tras arranque mínimo. Se implementaron Graph, reader y CLI. Tras corregir
+la especificación y reanalizar, pytest: 24 passed. Sin hooks registrados.
+T008 queda pendiente hasta la revisión manual del paso auxiliar de validación.
