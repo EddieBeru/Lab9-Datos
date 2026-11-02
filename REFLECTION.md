@@ -1,7 +1,7 @@
 # Reflexión del laboratorio — borrador factual
 
 Este borrador no cuenta como reflexión final: faltan las valoraciones personales
-solicitadas al estudiante y la decisión sobre el extra.
+solicitadas al estudiante para cerrar la reflexión.
 
 Se utilizó Codex con la integración de Spec Kit 1.2.3 y habilidades locales. El
 laboratorio comenzó dentro de un repositorio que también contenía otros trabajos.
@@ -59,4 +59,14 @@ Pendiente de respuesta personal del estudiante:
   ambigüedad o a incumplimiento; si no recuerda ninguno, registrarlo honestamente.
 
 La publicación y el enlace de entrega siguen pendientes de definir el remoto del
-repositorio independiente. El extra opcional todavía no se ha seleccionado ni omitido.
+repositorio independiente. El extra elegido fue Dijkstra y está implementado y fusionado.
+
+
+En el extra se mantuvo la representación original de las primeras features y se añadió
+un grafo ponderado separado, con diccionario de diccionarios de pesos enteros no negativos.
+Así no hubo que reescribir show ni sort. Dijkstra usa heap y predecesores, devuelve
+costes y caminos a todos los vértices y marca los inalcanzables con null. Los duplicados
+conservan el menor peso. Los casos cero, ciclos y empates se comparan con NetworkX;
+no se exige un camino único si hay empate. El análisis final no dejó CRITICAL/HIGH.
+Las 20 pruebas nuevas fallaron antes de implementar; después pasaron las 58 pruebas,
+incluidas las regresiones, también tras la fusión del extra en main.
