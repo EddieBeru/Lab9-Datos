@@ -1,0 +1,44 @@
+
+```text
+/speckit.specify
+
+Antes de actuar, revisa esta fase en los artefactos, rama activa e
+historial de Git. Clasifícala como completada, parcial, pendiente o
+no verificable y cita evidencia. Un archivo existente no prueba que
+el comando se ejecutó ni que la fase esté completa. Si está completa
+y vigente, omítela; si es parcial, termina solo lo pendiente. Si no
+es verificable, explica qué evidencia falta antes de regenerar.
+Comprueba si cambios anteriores invalidaron sus resultados.
+
+Prioriza README.md y docs/APPROACH.md, después la constitución y las
+decisiones aprobadas de la feature. Si se contradicen, informa el
+conflicto y pide la decisión necesaria; no cambies acuerdos en silencio.
+La documentación general de GitHub Spec Kit es referencia secundaria.
+Usa los comandos instalados de Spec Kit y respeta su procedimiento
+compatible con el laboratorio. No simules su ejecución.
+
+Implementar UNA extensión opcional del README: caminos mínimos con
+Dijkstra O árboles de expansión mínima con Kruskal/Prim. Usa la opción
+elegida en el diagnóstico; no implementes ambas por defecto.
+Trabaja sobre las Features 1 y 2 terminadas y fusionadas en main.
+
+Genera o completa specs/003-*/spec.md y los checklists que correspondan,
+sin duplicar una especificación válida. Usa el procedimiento instalado
+de /speckit.specify y verifica la rama y numeración.
+
+Describe qué puede hacer el usuario y qué resultados observa, sin
+adelantar estructuras de datos, módulos ni decisiones de algoritmo que
+pertenezcan a plan. Usa requisitos identificables, historias de usuario,
+criterios de éxito y escenarios de aceptación verificables.
+
+Incluye escenarios basados en los tres CSV cuando corresponda. Para el
+extra, añade fixtures con pesos previstos en lugar de presuponer que los
+CSV originales ya tengan ese formato. No alteres los datos originales.
+
+Marca las decisiones de comportamiento pendientes para clarify; no
+presentes suposiciones como respuestas del usuario. Revisa el checklist
+de calidad y reporta brechas antes de continuar.
+
+No avances automáticamente a plan: primero revisa la spec, registra
+evidencia y ejecuta el commit de specify.
+```
