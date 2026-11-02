@@ -19,3 +19,19 @@ son errores. Las líneas vacías se ignoran. Se admiten comillas según CSV.
 Resultados por stdout; errores por stderr sin traceback para errores esperados.
 Estado 0: éxito; 1: lectura/formato; 2: argumentos inválidos. `--help` muestra uso.
 No se imprime resultado parcial ante errores. Sin dependencias de grafos en ejecución.
+
+Para obtener un orden topológico:
+
+```sh
+.venv/bin/python -m graph_lab sort data/small-dag.csv
+.venv/bin/python -m graph_lab sort data/cs-curriculum.csv
+.venv/bin/python -m graph_lab sort data/build-with-cycle.csv
+```
+
+`sort` devuelve JSON con `order`, incluyendo vértices aislados y componentes
+desconectados. Elige el menor nombre Unicode entre los disponibles en cada paso.
+Los dos primeros ejemplos terminan en 0. El tercero termina en 1, sin stdout,
+con diagnóstico de ciclo en stderr; también se rechazan autoaristas para ordenar.
+`show` sigue aceptando ciclos. Un grafo vacío produce `{"order": []}`.
+NetworkX se instala solo mediante el extra de pruebas y actúa como oráculo;
+la aplicación implementa su propio algoritmo y no lo importa.

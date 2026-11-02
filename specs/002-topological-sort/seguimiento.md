@@ -45,3 +45,10 @@ Sin hooks. Las pruebas de Feature 1 son regresión obligatoria.
 
 Revisión dfe6d44; informe emitido y guardado fuera del comando en analisis.md.
 CRITICAL/HIGH 0. Sin modificación de artefactos durante el análisis.
+
+## Implement
+
+Se aplicó speckit-implement con prompt completo sección 8. Prerrequisitos
+ejecutados y checklist 7/7 sin cambiarlo. NetworkX instalado solo en extra test.
+Rojo: 14 fallos nuevos y 24 regresiones pasan. Tras implementar Kahn y sort:
+38 passed. No se alteró el lector ni las políticas de show. Sin hooks.
