@@ -14,7 +14,7 @@ de docs/prompts/cierre-proyecto.md sobre evidencia real; el extra Dijkstra está
 | CLI manual | Conforme | show/sort de tres CSV en validaciones y repetidos en main |
 | Extra Dijkstra | Completo localmente | specs/003-dijkstra, merge 624718e |
 | Reflexión | Completa | REFLECTION.md; experiencias y respuestas personales aportadas por el usuario |
-| Publicación | Preparada | Remoto aportado: EddieBeru/Lab9-Datos; confirmar push en registro final |
+| Publicación | Completa | Push normal de main y las tres ramas; hashes remotos comprobados |
 | Entrega | Repositorio identificado | https://github.com/EddieBeru/Lab9-Datos |
 
 ## Verificaciones ejecutadas
@@ -91,3 +91,16 @@ Solo cambió documentación desde las 58 pruebas aprobadas en main: no se repite
 Se revisó el diff de cierre y .gitignore; no se incorporan entornos ni secretos.
 Se publicarán explícitamente main, 001-directed-graphs, 002-topological-sort y
 003-dijkstra, conservando commits y ramas, sin force push ni squash.
+
+## Publicación confirmada
+
+Push normal completado con estado 0 para main y las tres ramas explícitas.
+Se comprobó con git ls-remote --heads origin que los hashes remotos coinciden
+con los locales: main 076e991, Feature 1 8c6e072, Feature 2 11766ab,
+Feature 3 968e93c. git merge-base --is-ancestor confirmó las tres features
+integradas en main. Esta anotación se guarda en un commit documental posterior,
+que también se publica en main. No se modificó código después de las 58 pruebas.
+
+Entrega: https://github.com/EddieBeru/Lab9-Datos
+Sin pendientes obligatorios conocidos. La limitación sobre el incidente personal
+está declarada honestamente en REFLECTION.md, sin fabricar una experiencia técnica.
