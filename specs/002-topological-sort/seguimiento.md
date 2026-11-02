@@ -28,3 +28,9 @@ Specify ce9432c. Se aplicó speckit-clarify con prompt completo sección 4;
 check_prerequisites.py --json --paths-only ejecutado. Se resolvieron por delegación
 formato, desempate, ciclos, salida parcial, aislados y vacío; sin preguntas ficticias.
 Requisitos y escenarios propagados. Checklist 4/7 → 7/7. Sin hooks.
+
+## Plan
+
+Se aplicó speckit-plan con prompt completo de sección 5; setup_plan.py --json
+copió plantilla. Reutiliza Graph y reader reales; comparación de Kahn/DFS y cola
+en research.md. NetworkX solo pruebas. Revisión constitucional PASS antes/después.
