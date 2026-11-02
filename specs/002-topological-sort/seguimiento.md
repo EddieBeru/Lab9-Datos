@@ -21,3 +21,10 @@ Se aplicó speckit-specify al prompt completo de sección 2; se resolvió spec-t
 con resolve_template.py --json, se creó rama 002 y puntero feature.json.
 Se generó borrador sobre aplicación real, con dos grupos pendientes para clarify.
 Sin hooks de extensiones. No se implementó nada durante specify.
+
+## Clarify
+
+Specify ce9432c. Se aplicó speckit-clarify con prompt completo sección 4;
+check_prerequisites.py --json --paths-only ejecutado. Se resolvieron por delegación
+formato, desempate, ciclos, salida parcial, aislados y vacío; sin preguntas ficticias.
+Requisitos y escenarios propagados. Checklist 4/7 → 7/7. Sin hooks.

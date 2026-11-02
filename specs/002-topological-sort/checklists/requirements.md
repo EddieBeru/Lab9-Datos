@@ -13,13 +13,13 @@
 
 ## Requirement Completeness
 
-- [ ] Sin decisiones pendientes ni ambigüedades.
-- [ ] Todos los requisitos y escenarios verificables con resultados concretos.
+- [x] Sin decisiones pendientes ni ambigüedades.
+- [x] Todos los requisitos y escenarios verificables con resultados concretos.
 
 ## Feature Readiness
 
-- [ ] Contrato de éxito y errores completo y coherente.
+- [x] Contrato de éxito y errores completo y coherente.
 
 ## Notes
 
-4/7 satisfechos; pendientes formato, determinismo y diagnóstico.
+7/7 satisfechos; resultados concretos y sin decisiones pendientes.
