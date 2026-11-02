@@ -61,3 +61,11 @@ con ruta e ID, dos historias en secuencia y pruebas antes del código. Sin hooks
 
 Tasks 8623545. Análisis de solo lectura sobre esa revisión, informe emitido
 en conversación y conservado posteriormente en analisis.md. CRITICAL/HIGH: 0.
+
+## Corrección de especificación durante implement
+
+Rojo: 24 fallos sobre paquete instalado. Primera implementación: 23 pasan,
+1 falla por conteo incorrecto en AS-003. CSV inspeccionado: belt, jacket, pants,
+shirt, shoes, socks, tie, undershorts, watch = 9 vértices. Se corrige primero spec;
+la aplicación ya produce el resultado correcto. No se inventa un hallazgo de analyze:
+este error fue descubierto por pruebas durante implement.

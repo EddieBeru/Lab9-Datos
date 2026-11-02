@@ -40,7 +40,7 @@ Como usuario quiero cargar un archivo y ver sus vértices y aristas dirigidas.
   [a,b,c] y edges [[a,b],[b,c]], con estado 0 y stderr vacío.
 - **AS-002**: Dado cs-curriculum.csv, al mostrarlo aparecen 23 aristas distintas;
   Data Structures → Algorithms aparece una vez, con todos sus extremos presentes.
-- **AS-003**: Dado small-dag.csv, al mostrarlo aparecen 10 vértices y 9 aristas;
+- **AS-003**: Dado small-dag.csv, al mostrarlo aparecen 9 vértices y 9 aristas;
   watch está presente sin aristas incidentes.
 - **AS-004**: Dado build-with-cycle.csv, al mostrarlo aparecen sus 13 aristas,
   conservando el ciclo auth → session → user-profile → auth y metrics → metrics.
