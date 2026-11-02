@@ -4,6 +4,7 @@ import json
 import sys
 
 from .reader import read_graph
+from .weighted_reader import read_weighted_graph
 
 
 def main(argv=None):
@@ -13,11 +14,17 @@ def main(argv=None):
                               ('sort', 'Obtener un orden topológico')]:
         command = commands.add_parser(name, help=description)
         command.add_argument('file', help='Archivo CSV source,target')
+    shortest = commands.add_parser('shortest', help='Caminos mínimos con pesos')
+    shortest.add_argument('file', help='CSV source,target,weight')
+    shortest.add_argument('source', help='Vértice origen')
     args = parser.parse_args(argv)
     try:
-        graph = read_graph(args.file)
-        result = ({'order': graph.topological_order()} if args.command == 'sort'
-                  else graph.as_dict())
+        if args.command == 'shortest':
+            result = read_weighted_graph(args.file).shortest_paths(args.source)
+        else:
+            graph = read_graph(args.file)
+            result = ({'order': graph.topological_order()} if args.command == 'sort'
+                      else graph.as_dict())
     except (OSError, UnicodeError):
         print(f'Error: no se pudo leer {args.file}', file=sys.stderr)
         return 1

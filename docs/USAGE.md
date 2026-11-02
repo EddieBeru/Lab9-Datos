@@ -35,3 +35,17 @@ con diagnóstico de ciclo en stderr; también se rechazan autoaristas para orden
 `show` sigue aceptando ciclos. Un grafo vacío produce `{"order": []}`.
 NetworkX se instala solo mediante el extra de pruebas y actúa como oráculo;
 la aplicación implementa su propio algoritmo y no lo importa.
+
+Extra Dijkstra, grafos dirigidos con pesos enteros no negativos:
+
+```sh
+.venv/bin/python -m graph_lab shortest tests/data/weighted.csv a
+```
+
+Usa otro CSV con encabezado `source,target,weight`. Una fila `z,,` declara un
+vértice aislado. Los duplicados conservan el menor peso. Se admiten cero, ciclos
+y bucles; se rechazan negativos, decimales y pesos ausentes en aristas.
+La salida incluye `distances` y `paths` para todos los vértices, con `null` para
+inalcanzables; el origen tiene distancia 0 y camino de un solo vértice. En empates
+se devuelve cualquier camino mínimo válido. Origen inexistente genera error 1.
+Los CSV sin pesos originales siguen usándose exclusivamente con `show` y `sort`.

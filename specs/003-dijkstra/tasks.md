@@ -4,24 +4,24 @@
 
 ## Phase 1: Setup
 
-- [ ] T001 Añadir tests/data/weighted.csv con ruta indirecta, duplicados y aislado (FR-301/302).
+- [x] T001 Añadir tests/data/weighted.csv con ruta indirecta, duplicados y aislado (FR-301/302).
 
 ## Phase 2: Foundational
 
-- [ ] T002 Escribir tests/test_shortest.py para AS-301–306 con oráculo y ejecutar rojo antes de lógica (FR-301–305).
+- [x] T002 Escribir tests/test_shortest.py para AS-301–306 con oráculo y ejecutar rojo antes de lógica (FR-301–305).
 
 ## Phase 3: User Story 1 (P1)
 
 Objetivo: caminos mínimos; comprobación independiente con fixture ponderado.
 
-- [ ] T003 [US1] Implementar src/graph_lab/weighted.py con enteros >=0, mínimo duplicado, Dijkstra y reconstrucción de rutas sin mutar (FR-301/302, AS-301–303).
-- [ ] T004 [US1] Implementar src/graph_lab/weighted_reader.py y shortest en cli.py, origen y salida distances/paths/null (FR-302/303, AS-301–303).
+- [x] T003 [US1] Implementar src/graph_lab/weighted.py con enteros >=0, mínimo duplicado, Dijkstra y reconstrucción de rutas sin mutar (FR-301/302, AS-301–303).
+- [x] T004 [US1] Implementar src/graph_lab/weighted_reader.py y shortest en cli.py, origen y salida distances/paths/null (FR-302/303, AS-301–303).
 
 ## Phase 4: User Story 2 (P2)
 
 Objetivo: errores comprobables con una entrada inválida.
 
-- [ ] T005 [US2] Completar validación de pesos, columnas, encabezado, aislados y errores sin salida parcial en weighted_reader.py/cli.py (FR-304, AS-304/305).
+- [x] T005 [US2] Completar validación de pesos, columnas, encabezado, aislados y errores sin salida parcial en weighted_reader.py/cli.py (FR-304, AS-304/305).
 
 ## Phase 5: Polish
 

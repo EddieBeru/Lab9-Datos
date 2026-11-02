@@ -18,3 +18,8 @@ tareas secuenciales, todas trazables y pruebas antes de código. Sin hooks.
 
 Analyze: revisión d211e9c, informe de solo lectura emitido en conversación y
 conservado después; CRITICAL/HIGH 0. Errata previa de notación corregida en spec.
+
+Implement: habilidad y prompt íntegro sección 8; prerrequisitos ejecutados,
+checklist 3/3 comprobado sin cambiarlo. Rojo: 20 fallos nuevos, 38 regresiones pasan.
+Implementados weighted.py, weighted_reader.py y despacho shortest: 58 passed.
+Sin dependencias nuevas de ejecución ni cambios a Graph/reader sin pesos.
