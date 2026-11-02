@@ -25,7 +25,7 @@ Objetivo y prueba independiente: no devolver orden parcial para ciclos o bucles.
 
 ## Phase 5: Polish
 
-- [ ] T006 Actualizar docs/USAGE.md y ejecutar suite, regresiones y revisión manual sort/show sobre los tres CSV; registrar specs/002-topological-sort/validacion.md (FR-205, SC-201–203).
+- [x] T006 Actualizar docs/USAGE.md y ejecutar suite, regresiones y revisión manual sort/show sobre los tres CSV; registrar specs/002-topological-sort/validacion.md (FR-205, SC-201–203).
 
 ## Dependencies & Execution Order
 
