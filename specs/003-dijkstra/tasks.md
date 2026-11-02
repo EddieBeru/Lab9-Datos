@@ -25,7 +25,7 @@ Objetivo: errores comprobables con una entrada inválida.
 
 ## Phase 5: Polish
 
-- [ ] T006 Ejecutar suite con oráculo y regresiones originales, revisión manual; guardar specs/003-dijkstra/validacion.md y actualizar docs/USAGE.md (FR-305, AS-306, SC-301–303).
+- [x] T006 Ejecutar suite con oráculo y regresiones originales, revisión manual; guardar specs/003-dijkstra/validacion.md y actualizar docs/USAGE.md (FR-305, AS-306, SC-301–303).
 
 ## Dependencies & Execution Order
 
