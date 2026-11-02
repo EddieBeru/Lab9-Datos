@@ -9,3 +9,6 @@ borrador y checklist creados. Sin hooks. No se implementó aplicación en esta f
 
 Clarify: se aplicó skill y prompt íntegro sección 4; prerrequisitos paths-only
 ejecutados. Recomendaciones delegadas registradas, checklist 3/3; sin pendientes.
+
+Plan: habilidad y prompt completo sección 5 aplicados; setup_plan.py resolvió
+plantilla. Investigación delegada, representación separada justificada; gates PASS.
