@@ -17,3 +17,12 @@ Comandos revisados: specify, clarify, plan, tasks, analyze e implement leen la c
 El flujo automático abreviado no sustituye la secuencia obligatoria del principio IV.
 Pendientes: ninguno. El informe se conserva aquí fuera del documento normativo.
 
+
+## Enmienda 1.1.0 — 2026-11-01
+
+Autorización explícita: el usuario pidió el extra y eligió Dijkstra. Se amplía
+únicamente alcance; los cinco principios permanecen. MINOR por ampliación material,
+ratificación preservada. Se resolvió constitution-template y revisaron plantillas: sin
+contradicciones adicionales. Requisitos previos conservados; specs 001/002 sin cambios.
+Informe de sincronización: 1.0.0 → 1.1.0; alcance añadido, sin secciones eliminadas,
+sin marcadores ni pendientes de plantilla. La ampliación habilita el nuevo flujo 003.

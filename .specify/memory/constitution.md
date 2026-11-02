@@ -72,8 +72,9 @@ Se PROHÍBE incorporar secretos a los archivos o al historial del proyecto.
 ## Alcance y datos
 
 La primera funcionalidad carga y muestra grafos dirigidos sin pesos; la segunda añade un
-orden topológico sobre la primera ya terminada y fusionada. Los grafos ponderados y la
-extensión opcional del README quedan fuera del alcance actual.
+orden topológico sobre la primera ya terminada y fusionada. La tercera funcionalidad, aprobada explícitamente por el usuario, añade grafos
+ponderados y caminos mínimos con Dijkstra. No incluye árboles de expansión mínima.
+Los contratos sin pesos de las dos primeras funcionalidades DEBEN conservarse.
 
 El material del laboratorio está en la raíz de su repositorio independiente:
 `README.md`, `docs/APPROACH.md` y `data/` son las referencias existentes; la instalación
@@ -129,4 +130,4 @@ Cada plan y revisión de cierre DEBE comprobar cumplimiento y registrar desviaci
 las desviaciones constitucionales DEBEN corregirse antes de implementar o cerrar la
 funcionalidad, según corresponda.
 
-**Versión**: 1.0.0 | **Ratificación**: 2026-11-01 | **Última modificación**: 2026-11-01
+**Versión**: 1.1.0 | **Ratificación**: 2026-11-01 | **Última modificación**: 2026-11-01
