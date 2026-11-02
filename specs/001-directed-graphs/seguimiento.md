@@ -50,3 +50,9 @@ actualizados; revisión de checklist: 11/16 → 16/16. Sin hooks registrados.
 Se aplicó speckit-plan con el prompt íntegro de sección 5; setup_plan.py --json
 resolvió y copió la plantilla. Investigación local delegada, diseño registrado
 y revisión constitucional antes/después PASS. Sin hooks. No se creó aplicación.
+
+## Tasks
+
+Plan a996609. Se aplicó speckit-tasks con prompt completo de sección 6;
+setup_tasks.py --json resolvió plantilla y documentos. Nueve tareas, todas
+con ruta e ID, dos historias en secuencia y pruebas antes del código. Sin hooks.
