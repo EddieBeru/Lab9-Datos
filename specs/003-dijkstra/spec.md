@@ -71,7 +71,7 @@ desconexión, ciclos, autoaristas, grafo vacío y origen inexistente.
 - FR-301: Devolver distancias mínimas y caminos válidos desde un origen a todos
   los vértices de un grafo dirigido ponderado; origen distancia cero.
 - FR-302: Leer source,target,weight con las reglas de Clarifications: enteros ASCII
-  no negativos, aislados source,,, mínimos duplicados, nombres recortados sensibles
+  no negativos, aislados mediante fila de tres campos con destino y peso vacíos; mínimos duplicados, nombres recortados sensibles
   a mayúsculas, ciclos/bucles permitidos, encabezado obligatorio y líneas vacías ignoradas.
   La notación source,, significa exactamente tres campos, dos vacíos tras el origen.
 - FR-303: shortest ARCHIVO ORIGEN devuelve JSON distances y paths con claves
