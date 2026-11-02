@@ -12,3 +12,6 @@ ejecutados. Recomendaciones delegadas registradas, checklist 3/3; sin pendientes
 
 Plan: habilidad y prompt completo sección 5 aplicados; setup_plan.py resolvió
 plantilla. Investigación delegada, representación separada justificada; gates PASS.
+
+Tasks: habilidad y prompt completo sección 6, setup_tasks.py ejecutado; seis
+tareas secuenciales, todas trazables y pruebas antes de código. Sin hooks.
